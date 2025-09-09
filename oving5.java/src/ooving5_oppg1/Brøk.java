@@ -6,8 +6,8 @@ public class Brøk {
     double resultat;
     double newTeller;
     double newNevner;
-    double finalTeller;
-    double finalNevner;
+    //double finalTeller;
+    //double finalNevner;
 
 
     public Brøk(double teller, double nevner){ //konstruktor 1
@@ -30,6 +30,10 @@ public class Brøk {
     return nevner;
    }
 
+   public String getBrøk(){
+    return this.getTeller() + "/" + this.getNevner();
+   }
+
    private double gcd(double a, double b) {
     if (b == 0) {
         return a;
@@ -38,38 +42,42 @@ public class Brøk {
 }
 
     private void simplify() {
-    double tellerInt = (int) this.newTeller;
-    double nevnerInt = (int) this.newNevner;
+    int tellerInt = (int) this.newTeller;
+    int nevnerInt = (int) this.newNevner;
 
-    double gcd = gcd(Math.abs(tellerInt), Math.abs(nevnerInt));
+    int gcd = (int) gcd(Math.abs(tellerInt), Math.abs(nevnerInt));
 
-    this.finalTeller = tellerInt / gcd;
-    this.finalNevner = nevnerInt / gcd;
+    this.newTeller = tellerInt / gcd;
+    this.newNevner = nevnerInt / gcd;
+
+    this.resultat = (double) this.newTeller / this.newNevner;
 }
 
 
 
    public void summer(Brøk other){
-        this.newTeller = (this.teller * other.nevner) + (this.nevner * other.nevner);
+        this.newTeller = (this.teller * other.nevner) + (other.teller * this.nevner);
         this.newNevner = this.nevner * other.nevner;
         this.resultat = ((this.teller)/(this.nevner)) + ((other.teller)/(other.nevner)); //Svaret som desimal
-        if (this.newTeller % this.newNevner == 0){ // tester hvis newTeller = newNevner
+        /*if (this.newTeller % this.newNevner == 0){ // tester hvis newTeller = newNevner
             this.newTeller /= this.newNevner;
             this.newNevner /= this.newNevner;
         }
+        */
         simplify();
 
 
    }
 
     public void subtraher(Brøk other){
-        this.newTeller = (this.teller * other.nevner) - (this.nevner * other.teller);
+        this.newTeller = (this.teller * other.nevner) - (other.teller * this.nevner);
         this.newNevner = this.nevner * other.nevner;
         this.resultat =  ((this.teller)/(this.nevner)) - ((other.teller)/(other.nevner)); //Svaret som desimal
-        if (this.newTeller % this.newNevner == 0){ // tester hvis newTeller = newNevner
+        /*if (this.newTeller % this.newNevner == 0){ // tester hvis newTeller = newNevner
             this.newTeller /= this.newNevner;
             this.newNevner /= this.newNevner;
         }
+        */
         simplify();
 
    }
@@ -78,10 +86,11 @@ public class Brøk {
         this.newTeller = this.teller * other.teller;
         this.newNevner = this.nevner * other.nevner;
         this.resultat =  ((this.teller)/(this.nevner)) * ((other.teller)/(other.nevner)); //Svaret som desimal
-        if (this.newTeller % this.newNevner == 0){ // tester hvis newTeller = newNevner
+        /*if (this.newTeller % this.newNevner == 0){ // tester hvis newTeller = newNevner
             this.newTeller /= this.newNevner;
             this.newNevner /= this.newNevner;
         }
+        */
         simplify();
 
         
@@ -92,10 +101,11 @@ public class Brøk {
         this.newTeller = this.teller * other.nevner;
         this.newNevner = this.nevner * other.teller;
         this.resultat =  ((this.teller)/(this.nevner)) / ((other.teller)/(other.nevner)); //Svaret som desimal
-        if (this.newTeller % this.newNevner == 0){ // tester hvis newTeller = newNevner
+        /*if (this.newTeller % this.newNevner == 0){ // tester hvis newTeller = newNevner
             this.newTeller /= this.newNevner;
             this.newNevner /= this.newNevner;
         }
+        */
         simplify();
 
    }
