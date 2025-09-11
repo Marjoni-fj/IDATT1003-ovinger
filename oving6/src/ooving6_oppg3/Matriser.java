@@ -78,7 +78,7 @@ public class Matriser {
         int[][] result = new int[this.rows][A.cols];
 
         for (int i = 0; i < rows; i++){
-            for (int j = 0; j < cols; j++){
+            for (int j = 0; j < A.cols; j++){
                 int sum = 0;
                 for (int k = 0; k < cols; k++){
                     sum += this.data[i][k] * A.data[k][j];
