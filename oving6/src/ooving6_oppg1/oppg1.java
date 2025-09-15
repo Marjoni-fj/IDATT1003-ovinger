@@ -13,7 +13,7 @@ public class oppg1 {
             antall[tall]++;
         }
 
-        for (int i = 1; i < antall.length; i++){
+        for (int i = 0; i < antall.length; i++){
             System.out.println(i + ": " + antall[i]);
         }
     }
