@@ -17,8 +17,6 @@ public class Tekstanalyse {
     return 29;
 } 
 
-
-
     public Tekstanalyse(String text,String tittel) { //konstruktør
     this.text = text;
     this.tittel = tittel;
