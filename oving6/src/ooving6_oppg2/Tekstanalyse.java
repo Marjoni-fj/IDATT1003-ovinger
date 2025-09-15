@@ -54,26 +54,24 @@ public class Tekstanalyse {
         return antallTegn[indeks];
     }
     
-/*
+
     public int mestForekommendeBokstaver(){
         int max = 0;
         for (int i = 0; i <= 28; i++){
             if (antallTegn[i] > max){
-                max += antallTegn[i];
-
-
-                    
-        
+                max = antallTegn[i];
             }
         }
+        return max;
        
     }
-*/
+
 
     public void statistics(){
         System.out.println("\n************ Statistics over "+ this.tittel +" ************* \n");
         System.out.println("Totalt antall bokstaver: " + this.totaltAntallBokstaver());
         System.out.println("Antall forskjellige bokstaver: " + this.antallForskjelligeBokstaver());
+        System.out.println("Mest forekommende bokstaver " + this.mestForekommendeBokstaver());
         System.out.println("Prosent ikke-bokstaver: " + this.prosentIkkeBokstaver() + "% \n");
         System.out.println("********************************************* \n");
     }
