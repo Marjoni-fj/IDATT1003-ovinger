@@ -1,5 +1,6 @@
 package ooving6_oppg2;
-
+import java.awt.Desktop;
+import java.net.URI;
 import java.util.Scanner;
 
 public class oppg2 {
@@ -19,10 +20,22 @@ public class oppg2 {
             String tittel; // tittel som brukes i statistics()
 
             if (valg.equals("s")) {
-                input = StandardTekst.CALL_ME_MAYBE;   // standardtekst
+                input = StandardTekst.CALL_ME_MAYBE;
                 tittel = "Call_me_maybe";
                 System.out.println("BEST WHITE GIRL SONG: CALL ME MAYBE");
-            } 
+                //System.out.println("Hør sangen her: " + StandardTekst.CALL_ME_MAYBE_LINK);
+
+            // Spør om brukeren vil åpne YouTube-linken
+            System.out.print("Vil du høre på sangen? (y/n): ");
+            String åpneLink = scanner.nextLine().toLowerCase();
+            if (åpneLink.equals("y")) {
+                try {
+                    Desktop.getDesktop().browse(new URI(StandardTekst.CALL_ME_MAYBE_LINK));
+                } catch (Exception e) {
+                    System.out.println("Kunne ikke åpne lenken: " + e.getMessage());
+                }
+                }
+            }
             else {
                 System.out.println("Skriv inn din tekst:");
                 input = scanner.nextLine(); // brukerens tekst

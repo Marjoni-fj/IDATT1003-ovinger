@@ -1,6 +1,8 @@
 package ooving6_oppg2;
 
 public class StandardTekst {
+    public static final String CALL_ME_MAYBE_LINK = "https://www.youtube.com/watch?v=fWNaR-rxAic";
+
 
     public static final String CALL_ME_MAYBE = 
         "I threw a wish in the well\n" +
