@@ -10,10 +10,10 @@ public class oppg2 {
 
 
         while (fortsett) {
-            System.out.println("Welcome to the Back-to-the-norskanalyse-program\n");
+            System.out.println("Welcome to the Back-to-the-norskanalyse-program");
 
             // Spør brukeren om standardtekst eller egen tekst
-            System.out.println("Vil du analysere standardteksten eller skrive egen tekst? (s/e)");
+            System.out.print("Vil du analysere standardteksten eller skrive egen tekst? (s/e): ");
             String valg = scanner.nextLine().toLowerCase();
             String input;  // selve teksten
             String tittel; // tittel som brukes i statistics()

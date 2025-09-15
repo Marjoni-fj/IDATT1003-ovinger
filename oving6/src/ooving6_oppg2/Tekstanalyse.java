@@ -71,7 +71,7 @@ public class Tekstanalyse {
 */
 
     public void statistics(){
-        System.out.println("************Statistics over "+ this.tittel +"************* \n");
+        System.out.println("\n************ Statistics over "+ this.tittel +" ************* \n");
         System.out.println("Totalt antall bokstaver: " + this.totaltAntallBokstaver());
         System.out.println("Antall forskjellige bokstaver: " + this.antallForskjelligeBokstaver());
         System.out.println("Prosent ikke-bokstaver: " + this.prosentIkkeBokstaver() + "% \n");
