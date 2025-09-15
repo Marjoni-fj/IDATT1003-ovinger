@@ -21,6 +21,7 @@ public class oppg2 {
             if (valg.equals("s")) {
                 input = StandardTekst.CALL_ME_MAYBE;   // standardtekst
                 tittel = "Call_me_maybe";
+                System.out.println("BEST WHITE GIRL SONG: CALL ME MAYBE");
             } 
             else {
                 System.out.println("Skriv inn din tekst:");
@@ -28,23 +29,27 @@ public class oppg2 {
                 tittel = "User_input";      // tittel for brukerens tekst
             }
 
-            // Opprett Tekstanalyse-objekt og kjør analysen
+            // Opprett Tekstanalyse-objekt etter brukerens ønske og kjører analysen
             Tekstanalyse analyse = new Tekstanalyse(input, tittel);
-            analyse.statistics(); // eller kall metodene dine direkte
+
+            analyse.statistics(); // Selve analysen
 
             // Spør om brukeren vil fortsette
             boolean gyldigSvar = false;
             while (!gyldigSvar) {
-                System.out.println("Vil du skrive en ny tekst? (y/n)");
+                System.out.print("Vil du skrive en ny tekst? (y/n): ");
                 String svar = scanner.nextLine().toLowerCase();
 
                 if (svar.equals("y")) {
                     gyldigSvar = true; // fortsetter løkka
-                } else if (svar.equals("n")) {
-                    System.out.println("Takk for at du brukte Back-to-the-norskanalyse-program");
+                } 
+                else if (svar.equals("n")) {
+                    System.out.println("Takk for at du brukte Back-to-the-norskanalyse-program :)");
+                    System.out.println("Avslutter...");
                     gyldigSvar = true;
                     fortsett = false; // avslutt løkka
-                } else {
+                } 
+                else {
                     System.out.println("Ugyldig valg, vennligst skriv y eller n.");
                 }
             }
