@@ -2,7 +2,7 @@ package ooving6_oppg2;
 
 public class Tekstanalyse {
     String text;
-    int[] antallTegn = new int[30];
+    int[] antallTegn = new int[30]; //liste med bare nullere fordelt på 30 plasser
 
     private int finnIndeks(char tegn) {
     tegn = Character.toLowerCase(tegn);
@@ -13,7 +13,7 @@ public class Tekstanalyse {
     return 29;
 }
 
-    public Tekstanalyse(String text) {
+    public Tekstanalyse(String text) { //konstruktør
     this.text = text;
     for (int i = 0; i < text.length(); i++) {
     int indeks = finnIndeks(text.charAt(i));
