@@ -58,14 +58,22 @@ public class Tekstanalyse {
     }
     
 
-    public int mestForekommendeBokstaver(){
+    public String mestForekommendeBokstaver(){
         int max = 0;
+        int indexMax = 0;
         for (int i = 0; i <= 28; i++){
             if (antallTegn[i] > max){
                 max = antallTegn[i];
-            }
+                indexMax = i;
+            } //Finner indexen til den bokstaven som forekommer mest
         }
-        return max;
+        char letter;
+        if (indexMax <= 25) letter = (char) ('a' + indexMax); 
+        else if (indexMax == 26) letter = 'æ';
+        else if (indexMax == 27) letter = 'ø';
+        else letter = 'å';
+        //if elseif else statement som omgjør indeksen til bokstav 
+        return letter + " forekom " + max + " ganger";
        
     }
 
@@ -74,7 +82,7 @@ public class Tekstanalyse {
         System.out.println("\n************ Statistics over "+ this.tittel +" ************* \n");
         System.out.println("Totalt antall bokstaver: " + this.totaltAntallBokstaver());
         System.out.println("Antall forskjellige bokstaver: " + this.antallForskjelligeBokstaver());
-        System.out.println("Mest forekommende bokstaver " + this.mestForekommendeBokstaver());
+        System.out.println("Mest forekommende bokstav(er): " + this.mestForekommendeBokstaver());
         System.out.println("Prosent ikke-bokstaver: " + this.prosentIkkeBokstaver() + "% \n");
         System.out.println("********************************************* \n");
     }
