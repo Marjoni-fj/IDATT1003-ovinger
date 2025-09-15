@@ -7,12 +7,17 @@ public class Tekstanalyse {
 
     private int finnIndeks(char tegn) {
     tegn = Character.toLowerCase(tegn);
+    switch(tegn){
+        case 'æ': return 26;
+        case 'ø': return 27;
+        case 'å': return 28;
+    }
     if (tegn >= 'a' && tegn <= 'z') return tegn - 'a';
-    if (tegn == 'æ') return 26;
-    if (tegn == 'ø') return 27;
-    if (tegn == 'å') return 28;
+   
     return 29;
-}
+} 
+
+
 
     public Tekstanalyse(String text,String tittel) { //konstruktør
     this.text = text;
