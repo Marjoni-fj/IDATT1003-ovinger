@@ -11,15 +11,16 @@ public class NyString {
     public String getSetning(){
         return tekst;
     }
-/*
-    public String forkort(String tekst){
-        String[] ord = tekst.split(" ");
-        for (ord : tekst){
 
+    public String forkort(){
+        String[] ord = tekst.split(" ");
+        String resultat = "";
+        for (String i : ord){
+            resultat += i.charAt(0);
         }
-        return tekst;
+        return resultat;
     }
-        */
+
 
     public String fjernBokstav(char bokstav){
         return this.tekst.replace(String.valueOf(bokstav), "");
