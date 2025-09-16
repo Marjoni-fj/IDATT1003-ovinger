@@ -2,7 +2,7 @@ package ooving7_oppg2;
 import java.util.Scanner;
 public class oppg2 {
     public static void main(String[] args){
-
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
         boolean isRunning = true;
 
