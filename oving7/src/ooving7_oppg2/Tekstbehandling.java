@@ -34,25 +34,36 @@ public class Tekstbehandling {
 
     }
     public double gjennomsnittOrdlengde(){
-        double average = 0;
-        return average;
+        String[] ord = text.split("[\\s.,!?;:]+");  // deler på mellomrom og skilletegn
+        int totalBokstaver = 0;
+
+        for (String o : ord){ //for løkke som itererer gjennom ordene og legger sammen ordlengdene
+            totalBokstaver += o.length();
+        }
+        if (ord.length == 0) return 0;  // unngå deling på null
+        return (double) totalBokstaver / ord.length;
 
     }
     public double gjennomsnittOrdPrPeriode(){
-        double ordPrPeriode = 0;
-        return ordPrPeriode;
+        String[] perioder = text.split("[.,!?;:]+");  // deler på mellomrom og skilletegn
+        String[] nyOrd = text.split("[\\s]");
+        double totalOrd = (nyOrd.length)/(perioder.length);
+
+        return totalOrd;
 
     }
-    public String skiftOrd(String newWord){
-        String newText = "";
+    public String skiftOrd(String oldWord, String newWord){
+        String find = "\\b" + oldWord + "\\b";
+        String newText = text.replaceAll(find, newWord);
+
         return newText;
     }
 
-    public String getText(){
+    public String getText(){ //Skriver ut teksten
         return text;
     }
 
-    public String getBigText(){
+    public String getBigText(){ //Skriver ut teksten i STORE bokstaver
         return text.toUpperCase();
     }
     
