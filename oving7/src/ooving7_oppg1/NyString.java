@@ -18,7 +18,7 @@ public class NyString {
     }
 
     public String fjernBokstav(char bokstav){
-        return setning;
+        return this.setning;
     }
     
 }
