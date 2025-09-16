@@ -21,8 +21,8 @@ public class Tekstanalyse {
     this.text = text;
     this.tittel = tittel;
     for (int i = 0; i < text.length(); i++) {
-    int indeks = finnIndeks(text.charAt(i));
-    antallTegn[indeks]++;
+        int indeks = finnIndeks(text.charAt(i));
+        antallTegn[indeks]++;
     }
 }
 
