@@ -33,6 +33,20 @@ public class Tekstbehandling {
         return total;
 
     }
+    public double gjennomsnittOrdlengde(){
+        double average = 0;
+        return average;
+
+    }
+    public double gjennomsnittOrdPrPeriode(){
+        double ordPrPeriode = 0;
+        return ordPrPeriode;
+
+    }
+    public String skiftOrd(String newWord){
+        String newText = "";
+        return newText;
+    }
 
     public String getText(){
         return text;
@@ -46,6 +60,8 @@ public class Tekstbehandling {
         System.out.println("\n************ Statistics over "+ this.tittel +" ************* \n");
         System.out.println("Selve teksten: "+ this.text +"\n");
         System.out.println("Totalt antall bokstaver: " + this.totaltAntallBokstaver());
+        System.out.println("Gjennomsnittlig ordlengde: " + this.gjennomsnittOrdlengde());
+        System.out.println("Gjennomsnittlig ord per periode: " + this.gjennomsnittOrdPrPeriode());
         System.out.println("Teksten i uppercase: "+ this.getBigText() +"\n");
 
         System.out.println("********************************************* \n");
