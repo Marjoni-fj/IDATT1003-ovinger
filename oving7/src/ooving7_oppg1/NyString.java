@@ -1,24 +1,28 @@
 package ooving7_oppg1;
 
 public class NyString {
-    private final String setning;
+    private final String tekst;
 
 
-    public NyString(String setning){
-        this.setning = setning;
-
+    public NyString(String tekst){
+        this.tekst = tekst;
     }
 
     public String getSetning(){
-        return setning;
+        return tekst;
     }
+/*
+    public String forkort(String tekst){
+        String[] ord = tekst.split(" ");
+        for (ord : tekst){
 
-    public String forkort(String setning){
-        return setning;
+        }
+        return tekst;
     }
+        */
 
     public String fjernBokstav(char bokstav){
-        return this.setning;
+        return this.tekst.replace(String.valueOf(bokstav), "");
     }
     
 }
