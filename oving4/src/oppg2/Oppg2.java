@@ -8,7 +8,7 @@ public class Oppg2 {
         Spiller spiller2 = new Spiller("Player 2");
     
     int runde = 1;
-        while (!spiller1.erFerdig() || !spiller2.erFerdig()){
+        while (!spiller1.erFerdig() && !spiller2.erFerdig()){
             System.out.println("Round" + runde);
             System.out.println("Scoreboard: ");
             System.out.println("Player 1: "+ spiller1.getSumPoeng());
