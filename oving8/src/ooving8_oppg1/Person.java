@@ -12,6 +12,12 @@ public class Person {
         this.fodselsaar = fodselsaar;
     }
 
+    @Override
+    public String toString() {
+        return fornavn + " " + etternavn + " (født " + fodselsaar + ")";
+    }
+
+
     public String getFornavn(){
         return fornavn;
     }

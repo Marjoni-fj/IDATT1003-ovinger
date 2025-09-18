@@ -24,6 +24,19 @@ public class ArbTaker {
     public double getMaanedsloenn() { return maanedsloenn; }
     public double getSkatteprosent() { return skatteprosent; }
 
+
+    @Override
+    public String toString() {
+        return "Arbeidstaker {" +
+            "\n  Navn: " + personalia.getFornavn() + " " + personalia.getEtternavn() +
+            "\n  Fødselsår: " + personalia.getFodselsaar() +
+            "\n  Arbeidstakernummer: " + arbTakerNr +
+            "\n  Ansettelsesår: " + ansettelsesaar +
+            "\n  Månedslønn: " + maanedsloenn +
+            "\n  Skatteprosent: " + skatteprosent + "%" +
+            "\n}";
+}
+
     public void setMaanedsloenn(double maanedsloenn){
         this.maanedsloenn = maanedsloenn;
     }
