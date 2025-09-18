@@ -33,11 +33,11 @@ public class ArbTaker {
     }
 
     public double skattetrekkPrMonth(){
-        return maanedsloenn * skatteprosent;
+        return maanedsloenn * (skatteprosent/100);
     }
     public double skattetrekkPrYear(){
-            double vanligMonth = 10.5 * this.skattetrekkPrMonth();
-            return vanligMonth;
+        double vanligMonth = 10.5 * this.skattetrekkPrMonth(); //10,5 månder av 12 måneder skal
+        return vanligMonth;
 
     }
 
@@ -46,7 +46,7 @@ public class ArbTaker {
     }
 
     public String fullNavn(){
-        return personalia.getFornavn() + ", " + personalia.getEtternavn();
+        return personalia.getEtternavn() + ", " + personalia.getFornavn();
     }
     public int age(){
         GregorianCalendar calendar = new GregorianCalendar();
@@ -59,6 +59,10 @@ public class ArbTaker {
         return thisYear - this.ansettelsesaar;
 
     }
+    public boolean harVaertAnsattMerEnn(int aar){
+        return yearsInWork() > aar;
+    }  
+
 
 
 
