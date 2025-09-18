@@ -16,7 +16,7 @@ public class oppg1 {
 
         while(fortsett){
             System.out.println("*************************************");
-            System.out.println("Velg valuta:");
+            System.out.println("Velg handling:");
             System.out.println("1: Arbeidstaker informasjon");
             System.out.println("2: Endre månedslønn");
             System.out.println("3: Endre Skatteprosent");
