@@ -1,6 +1,7 @@
 package ooving8_oppg1;
 import java.util.GregorianCalendar;
 
+
 public class ArbTaker {
     private final Person personalia; 
     private int arbTakerNr;
@@ -8,7 +9,8 @@ public class ArbTaker {
     private double maanedsloenn;
     private double skatteprosent;
 
-    public ArbTaker(Person personalia, int arbTakerNr, int ansettelsesaar, double maanedsloenn, double skatteprosent) {
+    public ArbTaker(Person personalia, int arbTakerNr, int ansettelsesaar, 
+                    double maanedsloenn, double skatteprosent) {
         this.personalia = personalia;
         this.arbTakerNr = arbTakerNr;
         this.ansettelsesaar = ansettelsesaar;
@@ -28,6 +30,34 @@ public class ArbTaker {
 
     public void setSkatteprosent(double skatteprosent){
         this.skatteprosent = skatteprosent;
+    }
+
+    public double skattetrekkPrMonth(){
+        return maanedsloenn * skatteprosent;
+    }
+    public double skattetrekkPrYear(){
+            double vanligMonth = 10.5 * this.skattetrekkPrMonth();
+            return vanligMonth;
+
+    }
+
+    public double bruttoloennPrYear(){
+        return maanedsloenn * 12;
+    }
+
+    public String fullNavn(){
+        return personalia.getFornavn() + ", " + personalia.getEtternavn();
+    }
+    public int age(){
+        GregorianCalendar calendar = new GregorianCalendar();
+        int thisYear = calendar.get(java.util.Calendar.YEAR); 
+        return thisYear - personalia.getBirthYear();
+    }
+    public int yearsInWork(){
+        GregorianCalendar calendar = new GregorianCalendar();
+        int thisYear = calendar.get(java.util.Calendar.YEAR);
+        return thisYear - this.ansettelsesaar;
+
     }
 
 

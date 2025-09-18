@@ -20,7 +20,7 @@ public class Person {
         return etternavn;
     }
 
-    public int getbirthyear(){
+    public int getBirthYear(){
         return birthyear;
     }
 

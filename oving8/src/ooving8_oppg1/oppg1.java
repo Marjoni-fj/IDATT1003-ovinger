@@ -7,7 +7,7 @@ public class oppg1 {
 
         System.out.println(person1.getFornavn());
         System.out.println(person1.getEtternavn());
-        System.out.println(person1.getbirthyear());
+        System.out.println(person1.getBirthYear());
 
 
         
