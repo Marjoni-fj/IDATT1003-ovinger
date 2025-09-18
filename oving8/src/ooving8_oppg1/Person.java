@@ -3,13 +3,13 @@ package ooving8_oppg1;
 public class Person {
     private final String fornavn;
     private final String etternavn;
-    private final int birthyear;
+    private final int fodselsaar;
 
 
-    public Person(String fornavn, String etternavn, int birthyear){
+    public Person(String fornavn, String etternavn, int fodselsaar){
         this.fornavn = fornavn;
         this.etternavn = etternavn;
-        this.birthyear = birthyear;
+        this.fodselsaar = fodselsaar;
     }
 
     public String getFornavn(){
@@ -20,8 +20,8 @@ public class Person {
         return etternavn;
     }
 
-    public int getBirthYear(){
-        return birthyear;
+    public int getFodselsaar(){
+        return fodselsaar;
     }
 
 
