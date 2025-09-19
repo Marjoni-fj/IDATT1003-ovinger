@@ -37,7 +37,12 @@ public class Oppgaveoversikt {
         }
     }
 
-    
+    @Override
+    public String toString(){
+        return "Antall Studenter i klassen: " + antStud;
+    }
+
+
 
     
 }

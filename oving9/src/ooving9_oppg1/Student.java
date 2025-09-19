@@ -18,7 +18,7 @@ public class Student {
     }
 
     public void økAntOppg(int økning){ 
-        this.antOppg += økning;   // legger til, ikke setter lik
+        this.antOppg += økning;
     }
 
     @Override
