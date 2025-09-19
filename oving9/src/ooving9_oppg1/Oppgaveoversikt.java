@@ -29,5 +29,15 @@ public class Oppgaveoversikt {
         antStud++;
     }
 
+    public void oekAntOppg(String navn, int oekning){
+        for (int j = 0; j < antStud; j++){
+            if (studenter[j].getNavn().equals(navn)){
+                studenter[j].økAntOppg(oekning);
+            }
+        }
+    }
+
+    
+
     
 }
