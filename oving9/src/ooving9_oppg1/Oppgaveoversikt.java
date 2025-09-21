@@ -42,6 +42,25 @@ public class Oppgaveoversikt {
         return "Antall Studenter i klassen: " + antStud;
     }
 
+    public void studentOversikt() {
+        for (int i = 0; i < antStud; i++) {
+            Student s = studenter[i];
+            System.out.println(s.toString() + 
+                            (s.erGodkjent() ? " (Godkjent)" : " (Ikke godkjent)"));
+        System.out.println();
+        }
+    }
+
+    public void meny(){
+        System.out.println("************************");
+        System.out.println("1. Skriv ut hele listen med status \n" +
+                                "2. Øk antall oppgaver for en student \n" +
+                                "3. Sjekk antall oppgaver for en bestemt student\n" +
+                                "4. Registrer ny student i klassen \n" +
+                                "5. Avslutt");
+        System.out.println("************************");
+    }
+
 
 
     

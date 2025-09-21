@@ -1,17 +1,70 @@
 package ooving9_oppg1;
+import java.util.Scanner;
 
 public class oppg1 {
     public static void main(String[] args){
-
-        Student student1 = new Student("Fredrik", 7);
+        Scanner scanner = new Scanner(System.in);
         Oppgaveoversikt oppgaveoversikt = new Oppgaveoversikt(10);
 
+        oppgaveoversikt.registrerNyStudent("Fredrik", 9);
+        oppgaveoversikt.registrerNyStudent("Anna", 7);
+        oppgaveoversikt.registrerNyStudent("Marius", 3);
 
+        boolean systemRunning = true;
 
-        System.out.println(student1.toString() + "\n");
-        oppgaveoversikt.registrerNyStudent("Fredrik", 7);
-        System.out.println("Antall studenter i klassen: " +oppgaveoversikt.getAntStud());
+        while (systemRunning){
+            oppgaveoversikt.meny();
+            int valg = scanner.nextInt();
+            scanner.nextLine();
 
+            switch (valg){
+                case 1:
+                    oppgaveoversikt.studentOversikt();
+                    break;
+
+                case 2:
+                    System.out.println("Hvilken student vil du se på? : ");
+                    String undersokelse = scanner.nextLine();
+                    int ant = oppgaveoversikt.oppgaverloest(undersokelse);
+                      if (ant == -1){
+                        System.out.println("Fant ikke studenten " + undersokelse);
+                    } else {
+                        System.out.println(undersokelse + " har " + ant + " oppgaver godkjent.");
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Hvilken student vil du oppdatere? : ");
+                    String navn = scanner.nextLine();
+                    System.out.print("Hvor mange oppgaver skal legges til? : ");
+                    int okning = scanner.nextInt();
+                    scanner.nextLine();
+                    oppgaveoversikt.oekAntOppg(navn, okning);
+                    int nyttAntall = oppgaveoversikt.oppgaverloest(navn);
+                    System.out.println(navn + " har nå " + nyttAntall + "/11 oppgaver godkjent.");
+                    break;
+                
+                case 4:
+                    System.out.print("Hva er navnet på studenten? ");
+                    String nyttNavn = scanner.nextLine();
+                    System.out.print("Hvor mange oppgaver har studenten fått godkjent? ");
+                    int nyttoppg = scanner.nextInt();
+                    scanner.nextLine();
+                    oppgaveoversikt.registrerNyStudent(nyttNavn, nyttoppg);
+                    System.out.println("Student " + nyttNavn + " registrert med " + nyttoppg + " oppgaver.");
+                    break;
+
+                case 5:
+                    System.out.println("Avslutter...");
+                    systemRunning = false;
+                    break;
+                
+                default:
+                    System.out.println("Ugjyldig valg");
+            }
+        }
+
+        scanner.close();
     }
     
 }

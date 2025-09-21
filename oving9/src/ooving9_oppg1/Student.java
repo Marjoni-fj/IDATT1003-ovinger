@@ -18,8 +18,18 @@ public class Student {
     }
 
     public void økAntOppg(int økning){ 
-        this.antOppg += økning;
+        if (antOppg + økning > 11) {
+            antOppg = 11;
+        } else {
+            antOppg += økning;
+}
+
     }
+
+    public boolean erGodkjent() {
+        return antOppg >= 8 && antOppg <=11; // 8 av 11 er godkjent
+    }
+
 
     @Override
     public String toString(){
