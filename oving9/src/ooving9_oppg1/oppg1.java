@@ -7,8 +7,11 @@ public class oppg1 {
         Oppgaveoversikt oppgaveoversikt = new Oppgaveoversikt(10);
 
         oppgaveoversikt.registrerNyStudent("Fredrik", 9);
-        oppgaveoversikt.registrerNyStudent("Anna", 7);
-        oppgaveoversikt.registrerNyStudent("Marius", 3);
+        oppgaveoversikt.registrerNyStudent("Mathea", 6);
+        oppgaveoversikt.registrerNyStudent("Daniel", 5);
+        oppgaveoversikt.registrerNyStudent("Jon", 5);
+        oppgaveoversikt.registrerNyStudent("Anine", 11);
+
 
         boolean systemRunning = true;
 
@@ -19,6 +22,7 @@ public class oppg1 {
 
             switch (valg){
                 case 1:
+                    oppgaveoversikt.toString();
                     oppgaveoversikt.studentOversikt();
                     break;
 
@@ -51,7 +55,7 @@ public class oppg1 {
                     int nyttoppg = scanner.nextInt();
                     scanner.nextLine();
                     oppgaveoversikt.registrerNyStudent(nyttNavn, nyttoppg);
-                    System.out.println("Student " + nyttNavn + " registrert med " + nyttoppg + " oppgaver.");
+                    System.out.println("Student " + nyttNavn + " registrert med " + nyttoppg + "/11 oppgaver godkjent.");
                     break;
 
                 case 5:

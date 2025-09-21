@@ -46,7 +46,7 @@ public class Oppgaveoversikt {
         for (int i = 0; i < antStud; i++) {
             Student s = studenter[i];
             System.out.println(s.toString() + 
-                            (s.erGodkjent() ? " (Godkjent)" : " (Ikke godkjent)"));
+                            (s.erGodkjent() ? " (Godkjent)" : " (Ikke godkjent)")); //ternary operator
         System.out.println();
         }
     }
@@ -54,13 +54,12 @@ public class Oppgaveoversikt {
     public void meny(){
         System.out.println("************************");
         System.out.println("1. Skriv ut hele listen med status \n" +
-                                "2. Øk antall oppgaver for en student \n" +
-                                "3. Sjekk antall oppgaver for en bestemt student\n" +
-                                "4. Registrer ny student i klassen \n" +
-                                "5. Avslutt");
+                            "2. Sjekk antall oppgaver for en bestemt student \n" +
+                            "3. Øk antall oppgaver for en student\n" +
+                            "4. Registrer ny student i klassen \n" +
+                            "5. Avslutt");
         System.out.println("************************");
     }
-
 
 
     

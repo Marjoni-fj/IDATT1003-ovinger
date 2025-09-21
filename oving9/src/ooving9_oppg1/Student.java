@@ -27,7 +27,7 @@ public class Student {
     }
 
     public boolean erGodkjent() {
-        return antOppg >= 8 && antOppg <=11; // 8 av 11 er godkjent
+        return antOppg >= 8;
     }
 
 
