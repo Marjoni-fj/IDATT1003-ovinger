@@ -8,8 +8,8 @@ public class Oppg1 {
         boolean erPaaKontoret = true;
 
         arrangementRegister.registrerNyttArrangement(1, "Flo rida konsert", "Trondheim", "UKA", "konsert", 2025_10_30_1800L);
-        arrangementRegister.registrerNyttArrangement(2, "Roc Boyz konsert", "Trondheim", "VG Lista", "konsert", 2025_6_30_1800L);
-        arrangementRegister.registrerNyttArrangement(3, "Astrid S konsert", "Oslo", "VG Lista", "konsert", 2024_2_30_1800L);
+        arrangementRegister.registrerNyttArrangement(2, "Roc Boyz konsert", "Trondheim", "VG Lista", "konsert", 2025_06_30_1800L);
+        arrangementRegister.registrerNyttArrangement(3, "Astrid S konsert", "Oslo", "VG Lista", "konsert", 2024_02_30_1800L);
         
         while (erPaaKontoret){
             arrangementRegister.arrangementKlientProgram();

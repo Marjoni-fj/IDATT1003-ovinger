@@ -22,8 +22,8 @@ public class Arrangement {
     @Override
     public String toString() {
     return String.format(
-        "Nr: %d | Navn: %s | Sted: %s | Arrangør: %s | Type: %s | Tidspunkt: %d",
-        nummer, navn, sted, arrangoer, type, tidspunkt
+        "Nr: %d | Navn: %s | Sted: %s | Arrangør: %s | Type: %s | Tidspunkt: %s",
+        nummer, navn, sted, arrangoer, type, formatTidspunkt()
     );
 }
 
@@ -33,6 +33,18 @@ public class Arrangement {
     public String getArrangoer(){ return arrangoer;}
     public String getType(){ return type;}
     public long getTidspunkt(){ return tidspunkt;}
+
+    private String formatTidspunkt() {
+        long år = tidspunkt / 100000000;
+        long måned = (tidspunkt / 1000000) % 100;
+        long dag = (tidspunkt / 10000) % 100;
+        long time = (tidspunkt / 100) % 100;
+        long minutt = tidspunkt % 100;
+
+        // Formater med leading zeros hvis nødvendig
+        return String.format("%d_%02d_%02d_%02d%02d", år, måned, dag, time, minutt);
+    }
+
 
 
 
