@@ -1,7 +1,7 @@
 package ooving10_oppg1;
 
 public class Arrangement {
-    private final int nummer;
+    private final long nummer;
     private final String navn;
     private final String sted;
     private final String arrangoer;
@@ -9,7 +9,7 @@ public class Arrangement {
     private final int tidspunkt;
 
 
-    public Arrangement(int nummer, String navn, String sted, 
+    public Arrangement(long nummer, String navn, String sted, 
                        String arrangoer, String type, int tidspunkt){
         this.nummer = nummer;
         this.navn = navn;
@@ -27,7 +27,7 @@ public class Arrangement {
     );
 }
 
-    public int getNummer(){ return nummer;}
+    public long getNummer(){ return nummer;}
     public String getNavn(){ return navn;}
     public String getSted(){ return sted;}
     public String getArrangoer(){ return arrangoer;}
