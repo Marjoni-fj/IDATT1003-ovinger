@@ -19,6 +19,13 @@ public class Arrangement {
         this.tidspunkt = tidspunkt;
 
     }
+    @Override
+    public String toString() {
+    return String.format(
+        "Nr: %d | Navn: %s | Sted: %s | Arrangør: %s | Type: %s | Tidspunkt: %d",
+        nummer, navn, sted, arrangoer, type, tidspunkt
+    );
+}
 
     public int getNummer(){ return nummer;}
     public String getNavn(){ return navn;}

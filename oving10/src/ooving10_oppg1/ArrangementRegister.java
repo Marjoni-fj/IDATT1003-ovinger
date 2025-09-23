@@ -19,11 +19,25 @@ public class ArrangementRegister {
     }
 
     public void AlleArangementerPaaSted(String sted){
-        String steder;
-        String[] sammeSted = new String[antArrang];
         for (int i = 0; i < antArrang; i++){
             if (arrangementer[i].getSted().equals(sted)){
-                System.out.println(arrangementer[i]);
+                System.out.println(arrangementer[i].toString());
+            }
+        }
+    }
+
+    public void AlleArangementerAvTypen(String type){
+        for (int i = 0; i < antArrang; i++){
+            if (arrangementer[i].getType().equals(type)){
+                System.out.println(arrangementer[i].toString());
+            }
+        }
+    }
+
+    public void AlleArangementerArrangertAv(String arrangoer){
+        for (int i = 0; i < antArrang; i++){
+            if (arrangementer[i].getArrangoer().equals(arrangoer)){
+                System.out.println(arrangementer[i].toString());
             }
         }
     }
