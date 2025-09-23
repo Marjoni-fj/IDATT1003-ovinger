@@ -41,4 +41,17 @@ public class ArrangementRegister {
             }
         }
     }
+
+    public void arrangementKlientProgram(){
+        System.out.println("****************************************************************");
+        System.out.println("Vekommen til kommunens turistkontor. Hva kan jeg hjelpe deg med?");
+        System.out.println("1. Registrer nytt arrangement");
+        System.out.println("2. Finn arrangementer på sted");
+        System.out.println("3. Finn arrangementer på dato");
+        System.out.println("4. Finn arrangementer i tidsintervall");
+        System.out.println("5. Finn arrangementer på arrangør");
+        System.out.println("6. Ingenting");
+        System.out.println("****************************************************************");
+
+    }
 }
