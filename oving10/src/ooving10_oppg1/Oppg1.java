@@ -4,12 +4,49 @@ import java.util.Scanner;
 public class Oppg1 {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        ArrangementRegister arrangementRegister = new ArrangementRegister(10);
+        ArrangementRegister arrangementRegister = new ArrangementRegister(15);
         boolean erPaaKontoret = true;
 
-        arrangementRegister.registrerNyttArrangement(1, "Flo rida konsert", "Trondheim", "UKA", "konsert", 2025_10_30_1800L);
-        arrangementRegister.registrerNyttArrangement(2, "Roc Boyz konsert", "Trondheim", "VG Lista", "konsert", 2025_06_30_1800L);
-        arrangementRegister.registrerNyttArrangement(3, "Astrid S konsert", "Oslo", "VG Lista", "konsert", 2024_02_30_1800L);
+        long[] tidspunkter = {
+            2025_10_30_1800L, 2025_06_30_1800L, 2024_02_30_1800L,
+            2025_03_15_1700L, 2025_05_10_1200L, 2025_07_20_2000L,
+            2025_11_05_1900L, 2025_04_18_1100L, 2025_08_12_1600L,
+            2025_09_25_2100L, 2025_06_01_1300L, 2025_12_15_1900L,
+            2025_10_10_1800L, 2025_11_20_2000L, 2025_02_28_1400L
+        };
+
+        String[] navn = {
+            "Flo Rida konsert", "Roc Boyz konsert", "Astrid S konsert",
+            "Barneteater: Løvenes Konge", "Foredrag om klima", "Jazzfestival",
+            "Stand-up kveld", "Kunstutstilling", "Barneteater: Askepott",
+            "Popkonsert: The Weeknd", "Foredrag om teknologi", "Jazzkveld",
+            "Teaterforestilling: Hamlet", "Rockkonsert: Imagine Dragons", "Foredrag om historie"
+        };
+
+        String[] sted = {
+            "Trondheim", "Trondheim", "Oslo", "Bergen", "Oslo",
+            "Stavanger", "Trondheim", "Oslo", "Bergen", "Stavanger",
+            "Trondheim", "Bergen", "Oslo", "Stavanger", "Bergen"
+        };
+
+        String[] arrangor = {
+            "UKA", "VG Lista", "VG Lista", "Barneteateret", "Klimaforum",
+            "Stavanger Jazz", "Humorlaget", "Galleri Oslo", "Barneteateret", "VG Lista",
+            "Teknologiforeningen", "Bergen Jazz", "Oslo Teater", "VG Lista", "Historieforeningen"
+        };
+
+        String[] type = {
+            "konsert", "konsert", "konsert", "barneteater", "foredrag",
+            "konsert", "komedie", "utstilling", "barneteater", "konsert",
+            "foredrag", "konsert", "teater", "konsert", "foredrag"
+        };
+
+        // Legg til alle i registeret
+        for (int i = 0; i < 15; i++) {
+            arrangementRegister.registrerNyttArrangement(i + 1, navn[i], sted[i], arrangor[i], type[i], tidspunkter[i]);
+        }
+
+
         
         while (erPaaKontoret){
             arrangementRegister.arrangementKlientProgram();
