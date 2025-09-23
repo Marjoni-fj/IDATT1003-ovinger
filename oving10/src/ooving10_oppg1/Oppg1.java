@@ -6,9 +6,9 @@ public class Oppg1 {
         Scanner scanner = new Scanner(System.in);
         ArrangementRegister arrangementRegister = new ArrangementRegister(10);
 
-        arrangementRegister.registrerNyttArrangement(1, "Flo rida konsert", "Trondheim", "UKA", "konsert", 10301800);
-        arrangementRegister.registrerNyttArrangement(2, "Roc Boyz konsert", "Trondheim", "VG Lista", "konsert", 6301800);
-        arrangementRegister.registrerNyttArrangement(3, "Astrid S konsert", "Oslo", "VG Lista", "konsert", 2301800);
+        arrangementRegister.registrerNyttArrangement(1, "Flo rida konsert", "Trondheim", "UKA", "konsert", 202510301800L);
+        arrangementRegister.registrerNyttArrangement(2, "Roc Boyz konsert", "Trondheim", "VG Lista", "konsert", 20256301800L);
+        arrangementRegister.registrerNyttArrangement(3, "Astrid S konsert", "Oslo", "VG Lista", "konsert", 20242301800L);
         
         System.out.println("Alle arrangementer i Trondheim");
         arrangementRegister.AlleArangementerPaaSted("Trondheim");

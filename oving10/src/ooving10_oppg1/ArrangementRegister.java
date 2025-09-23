@@ -13,7 +13,7 @@ public class ArrangementRegister {
     public int getAntallArrangementer(){ return antArrang;}
 
     public void registrerNyttArrangement(int nummer, String navn, String sted, 
-                                        String arrangoer, String type, int tidspunkt){
+                                        String arrangoer, String type, long tidspunkt){
         arrangementer[antArrang] = new Arrangement(nummer, navn, sted, arrangoer, type, tidspunkt);
         antArrang++;
     }
