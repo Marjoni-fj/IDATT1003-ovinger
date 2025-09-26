@@ -1,43 +1,43 @@
 package ooving10_oppg1;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ArrangementRegister {
-    private Arrangement[] arrangementer;
-    private int antArrang = 0;
+    private List<Arrangement> arrangementer;
 
-
-
-    public ArrangementRegister(int kapasitet){
-        arrangementer = new Arrangement[kapasitet];
-        antArrang = 0;
-    }
-    public int getAntallArrangementer(){ return antArrang;}
-
-    public void registrerNyttArrangement(int nummer, String navn, String sted, 
-                                        String arrangoer, String type, long tidspunkt){
-        arrangementer[antArrang] = new Arrangement(nummer, navn, sted, arrangoer, type, tidspunkt);
-        antArrang++;
+    public ArrangementRegister() {
+        arrangementer = new ArrayList<>();
     }
 
-    public void AlleArangementerPaaSted(String sted){
-        for (int i = 0; i < antArrang; i++){
-            if (arrangementer[i].getSted().equals(sted)){
-                System.out.println(arrangementer[i].toString());
+    public int getAntallArrangementer() {
+        return arrangementer.size();
+    }
+
+    public void registrerNyttArrangement(int nummer, String navn, String sted,
+                                         String arrangoer, String type, long tidspunkt) {
+        arrangementer.add(new Arrangement(nummer, navn, sted, arrangoer, type, tidspunkt));
+    }
+
+    public void AlleArangementerPaaSted(String sted) {
+        for (Arrangement a : arrangementer) {
+            if (a.getSted().equalsIgnoreCase(sted)) {
+                System.out.println(a);
             }
         }
     }
 
-    public void AlleArangementerAvTypen(String type){
-        for (int i = 0; i < antArrang; i++){
-            if (arrangementer[i].getType().equals(type)){
-                System.out.println(arrangementer[i].toString());
+    public void AlleArangementerAvTypen(String type) {
+        for (Arrangement a : arrangementer) {
+            if (a.getType().equalsIgnoreCase(type)) {
+                System.out.println(a);
             }
         }
     }
 
-    public void AlleArangementerArrangertAv(String arrangoer){
-        for (int i = 0; i < antArrang; i++){
-            if (arrangementer[i].getArrangoer().equals(arrangoer)){
-                System.out.println(arrangementer[i].toString());
+    public void AlleArangementerArrangertAv(String arrangoer) {
+        for (Arrangement a : arrangementer) {
+            if (a.getArrangoer().equalsIgnoreCase(arrangoer)) {
+                System.out.println(a);
             }
         }
     }
