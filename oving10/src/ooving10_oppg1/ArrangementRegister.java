@@ -1,5 +1,6 @@
 package ooving10_oppg1;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class ArrangementRegister {
@@ -35,15 +36,22 @@ public class ArrangementRegister {
         }
     }
 
-    public void AlleArangementerPaaDatoIntervallet(long startDato, long sluttDato){
-        for (Arrangement a : arrangementer){
-            long dato = a.getTidspunkt() / 10000;
-            if (dato >= startDato && dato <= sluttDato){
-                System.out.println(a);
-            }
-        }
+    public void AlleArangementerPaaDatoIntervallet(long startDato, long sluttDato) {
+    List<Arrangement> funnet = new ArrayList<>();
 
+    for (Arrangement a : arrangementer) {
+        long dato = a.getTidspunkt() / 10000;
+        if (dato >= startDato && dato <= sluttDato) {
+            funnet.add(a);
+        }
     }
+
+    funnet.sort(Comparator.comparingLong(Arrangement::getTidspunkt));
+
+    for (Arrangement a : funnet) {
+        System.out.println(a);
+    }
+}
 
     public void AlleArangementerAvTypen(String type) {
         for (Arrangement a : arrangementer) {
