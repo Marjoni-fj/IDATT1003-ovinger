@@ -10,6 +10,11 @@ public class ArrangementRegister {
         arrangementer = new ArrayList<>();
     }
 
+    public List<Arrangement> getArrangementer() {
+        return arrangementer;
+    }
+
+
     public int getAntallArrangementer() {
         return arrangementer.size();
     }
@@ -72,6 +77,7 @@ public class ArrangementRegister {
     public void arrangementKlientProgram(){
         System.out.println("****************************************************************");
         System.out.println("Vekommen til kommunens turistkontor. Hva kan jeg hjelpe deg med?");
+        System.out.println("0. Se alle arrangementene");
         System.out.println("1. Registrer nytt arrangement");
         System.out.println("2. Finn arrangementer på sted");
         System.out.println("3. Finn arrangementer på dato");

@@ -56,8 +56,43 @@ public class Oppg1 {
             scanner.nextLine(); // rydder linjeskift
 
             switch (valg) {
+                case 0:
+                    for (Arrangement a : arrangementRegister.getArrangementer()){
+                        System.out.println(a);
+                    }
+                    System.out.println();
+                    break;
                 case 1: // Registrer nytt arrangement
-                    System.out.println("Funksjonalitet for registrering kommer snart...");
+                    System.out.println("Du ønsker å registrere et nytt arrangement");
+    
+                    System.out.print("Hva heter arrangementet: ");
+                    String nyArrangementNavn = scanner.nextLine();
+                    
+                    System.out.print("Hvor holdes arrangementet: ");
+                    String nyArrangementSted = scanner.nextLine();
+                    
+                    System.out.print("Hvem arrangerer arrangementet: ");
+                    String nyArrangementArrangor = scanner.nextLine();
+                    
+                    System.out.print("Hva slags type arrangement er det (konsert, teater, osv): ");
+                    String nyArrangementType = scanner.nextLine();
+                    
+                    System.out.print("Når skjer arrangementet [YYYYMMDDTTMM]: ");
+                    long nyArrangementTidspunkt = scanner.nextLong();
+                    scanner.nextLine(); // rydder opp etter nextLong
+
+                    int nyttNummer = arrangementRegister.getAntallArrangementer() + 1;
+
+                    arrangementRegister.registrerNyttArrangement(
+                        nyttNummer,
+                        nyArrangementNavn,
+                        nyArrangementSted,
+                        nyArrangementArrangor,
+                        nyArrangementType,
+                        nyArrangementTidspunkt
+                    );
+                    System.out.println("✅ Arrangementet ble lagt til med nummer " + nyttNummer);
+                    System.out.println();
                     break;
 
                 case 2: // Finn arrangementer på sted
