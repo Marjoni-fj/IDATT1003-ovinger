@@ -75,7 +75,13 @@ public class Oppg1 {
                     break;
 
                 case 4: // Finn arrangementer i tidsintervall
-                    System.out.println("Funksjonalitet for søk i tidsintervall kommer snart...");
+                    System.out.print("Fra hvilken startdato har du lyst til å sjekke: ");
+                    long startTid = scanner.nextLong();
+                    System.out.print("Fra hvilken slutt har du lyst til å sjekke: ");
+                    long sluttTid = scanner.nextLong();
+                    System.out.println();
+                    arrangementRegister.AlleArangementerPaaDatoIntervallet(startTid, sluttTid);
+                    System.out.println();
                     break;
 
                 case 5: // Finn arrangementer på arrangør

@@ -35,6 +35,16 @@ public class ArrangementRegister {
         }
     }
 
+    public void AlleArangementerPaaDatoIntervallet(long startDato, long sluttDato){
+        for (Arrangement a : arrangementer){
+            long dato = a.getTidspunkt() / 10000;
+            if (dato >= startDato && dato <= sluttDato){
+                System.out.println(a);
+            }
+        }
+
+    }
+
     public void AlleArangementerAvTypen(String type) {
         for (Arrangement a : arrangementer) {
             if (a.getType().equalsIgnoreCase(type)) {
