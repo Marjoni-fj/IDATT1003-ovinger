@@ -68,6 +68,10 @@ public class Oppg1 {
                     break;
 
                 case 3: // Finn arrangementer på dato
+                    System.out.print("Hvilket tidspunkt har du lyst til å sjekke ut? ");
+                    long tid = scanner.nextLong();
+                    arrangementRegister.AlleArangementerPaaDato(tid);
+                    System.out.println();
                     break;
 
                 case 4: // Finn arrangementer i tidsintervall

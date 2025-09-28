@@ -26,6 +26,15 @@ public class ArrangementRegister {
         }
     }
 
+    public void AlleArangementerPaaDato(long soektDato){
+        for (Arrangement a : arrangementer){
+            long dato = a.getTidspunkt() / 10_000;
+            if (dato == soektDato){
+                System.out.println(a);
+            }
+        }
+    }
+
     public void AlleArangementerAvTypen(String type) {
         for (Arrangement a : arrangementer) {
             if (a.getType().equalsIgnoreCase(type)) {
