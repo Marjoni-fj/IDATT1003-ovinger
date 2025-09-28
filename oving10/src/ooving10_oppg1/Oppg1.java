@@ -68,7 +68,6 @@ public class Oppg1 {
                     break;
 
                 case 3: // Finn arrangementer på dato
-                    System.out.println("Funksjonalitet for søk på dato kommer snart...");
                     break;
 
                 case 4: // Finn arrangementer i tidsintervall
