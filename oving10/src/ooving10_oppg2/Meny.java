@@ -9,10 +9,12 @@ public class Meny {
     public Meny(String navn) {
         this.navn = navn;
     }
-
+    //----------------------------------------//
+    //Get-metoder
     public String getNavn(){ return navn; }
     public List<Rett> getRetter(){ return retter; }
     public void leggTilRett(Rett rett){ retter.add(rett); }
+    //----------------------------------------//
 
     public double beregnMenyTotalpris(){
         double totalPris = 0;
@@ -21,7 +23,8 @@ public class Meny {
         }
         return totalPris;
     }
-
+    //----------------------------------------//
+    //finn-metoder
     public void finnRettSomHeter(String navn){ //finner en spesifikt rett i menyen basert på navn
         for (Rett rett : retter) {
             if (rett.getNavn().equalsIgnoreCase(navn)) {

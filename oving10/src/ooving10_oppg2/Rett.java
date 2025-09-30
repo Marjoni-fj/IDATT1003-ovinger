@@ -13,10 +13,13 @@ public class Rett {
         this.pris = pris;
         this.oppskrift = oppskrift;
     }
+    //----------------------------------------//
+    //get-metoder
     public String getNavn(){ return navn; }
     public String getType(){ return type; }
     public double getPris(){ return pris; }
     public String getOppskrift(){ return oppskrift; }
+    //----------------------------------------//
 
     @Override
     public String toString() {

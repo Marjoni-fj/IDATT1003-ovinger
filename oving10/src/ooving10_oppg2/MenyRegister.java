@@ -10,11 +10,14 @@ public class MenyRegister {
         menyer = new ArrayList<>();
     }
 
+    //----------------------------------------//
+    //liste over alle rettene
     private List<Rett> alleRetter = new ArrayList<>();
 
     public void registrerNyRett(Rett rett) {
         alleRetter.add(rett);
     }
+    //----------------------------------------//
     
     public List<Meny> getMenyer() { //Get metode for å hente menyen
         return menyer;
@@ -24,6 +27,8 @@ public class MenyRegister {
         menyer.add(meny);
     }
 
+    //----------------------------------------//
+    //Finn-metoder
     public Meny finnMeny(String navn) {
         for (Meny meny : menyer) {
             if (meny.getNavn().equalsIgnoreCase(navn)) {
@@ -63,5 +68,6 @@ public class MenyRegister {
         }
         return menyIntervall;
     }
+    //----------------------------------------//
 
 }
