@@ -53,14 +53,15 @@ public class MenyRegister {
             }
         }
     }
-    public Meny finnMenyerMedTotalprisMellom(double minimalPrice, double maximalPrice){
+    public List<Meny> finnMenyerMedTotalprisMellom(double minimalPrice, double maximalPrice){
         List<Meny> menyIntervall = new ArrayList<Meny>();
         for (Meny meny : menyer){
-            if (meny.beregnMenyTotalpris() >= minimalPrice && meny.beregnMenyTotalpris() <= maximalPrice){
+            double pris = meny.beregnMenyTotalpris();
+            if (pris >= minimalPrice && pris <= maximalPrice){
                 menyIntervall.add(meny);
             }
         }
-        return null;
+        return menyIntervall;
     }
 
 }
