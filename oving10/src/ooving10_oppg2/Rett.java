@@ -24,7 +24,7 @@ public class Rett {
     @Override
     public String toString() {
         return String.format(
-            "Navn: %s | Type: %s | Pris: %.2f | Oppskrift: %s",
+            "Navn: %s | Type: %s | Pris: %.2f kr | Oppskrift: %s",
             navn, type, pris, oppskrift
         );
 

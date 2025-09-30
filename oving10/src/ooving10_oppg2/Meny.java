@@ -51,7 +51,7 @@ public class Meny {
         for (Rett rett : retter) {
             tekst += "  - " + rett.toString() + "\n"; 
         }
-        tekst += "Totalpris: " + beregnMenyTotalpris() + "\n";
+        tekst += "Totalpris: " + beregnMenyTotalpris() + "kr \n";
         return tekst;
     };
     
