@@ -14,6 +14,10 @@ public class MenyRegister {
     //liste over alle rettene
     private List<Rett> alleRetter = new ArrayList<>();
 
+    public List<Rett> getAlleRetter() {
+    return alleRetter;
+    }
+
     public void registrerNyRett(Rett rett) {
         alleRetter.add(rett);
     }
@@ -65,5 +69,16 @@ public class MenyRegister {
         return menyIntervall;
     }
     //----------------------------------------//
+    public void klientOversikt(){
+        System.out.println("\n=== MENYREGISTER ===");
+        System.out.println("1. Registrer ny rett");
+        System.out.println("2. Registrer ny meny");
+        System.out.println("3. Se alle menyer");
+        System.out.println("4. Finn rett etter navn");
+        System.out.println("5. Finn alle retter av type");
+        System.out.println("6. Finn menyer innenfor prisintervall");
+        System.out.println("0. Avslutt");
+        System.out.print("Velg et alternativ: ");
+    }
 
 }
