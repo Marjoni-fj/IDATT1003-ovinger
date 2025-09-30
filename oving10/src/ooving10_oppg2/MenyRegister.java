@@ -33,6 +33,17 @@ public class MenyRegister {
         return null;
     } 
 
+    public Meny finnRett(String Rettnavn){
+        for (Meny meny : menyer){
+            for (Rett rett : meny.getRetter()){
+                if (rett.getNavn().equals(Rettnavn)){
+                    System.out.println(rett.toString());
+                }
+            }
+        }
+        return null;
+    }
+
     public void finnAlleRetterAvTypen(String type){
         for (Meny meny : menyer){
             for (Rett rett : meny.getRetter()){
