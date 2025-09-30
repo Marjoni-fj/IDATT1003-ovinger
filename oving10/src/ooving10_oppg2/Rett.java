@@ -15,5 +15,14 @@ public class Rett {
     public String getType(){ return type; }
     public double getPris(){ return pris; }
 
+    @Override
+    public String toString() {
+        return String.format(
+            "Navn: %s | Type: %s | Pris: %.2f",
+            navn, type, pris
+        );
+
     
+}
+
 }
