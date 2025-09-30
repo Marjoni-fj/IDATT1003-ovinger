@@ -7,6 +7,31 @@ public class Oppg2 {
         Scanner scanner = new Scanner(System.in);
         MenyRegister register = new MenyRegister();
 
+        // -----------------------
+        // Eksempelretter
+        // -----------------------
+        register.registrerNyRett(new Rett("Bruschetta", "Forrett", 75, "test1"));
+        register.registrerNyRett(new Rett("Caesar Salat", "Forrett", 85, "test2"));
+        register.registrerNyRett(new Rett("Biff med pommes frites", "Hovedrett", 180, "test3"));
+        register.registrerNyRett(new Rett("Laks med grønnsaker", "Hovedrett", 160, "test4"));
+        register.registrerNyRett(new Rett("Sjokolademousse", "Dessert", 90, "test5"));
+        register.registrerNyRett(new Rett("Panna Cotta", "Dessert", 95, "test6"));
+
+        // -----------------------
+        // Eksempelmenyer
+        // -----------------------
+        Meny meny1 = new Meny("Lunsjmeny");
+        meny1.leggTilRett(register.finnRett("Bruschetta"));
+        meny1.leggTilRett(register.finnRett("Laks med grønnsaker"));
+        meny1.leggTilRett(register.finnRett("Panna Cotta"));
+        register.registrerNyMeny(meny1);
+
+        Meny meny2 = new Meny("Kveldmeny");
+        meny2.leggTilRett(register.finnRett("Caesar Salat"));
+        meny2.leggTilRett(register.finnRett("Biff med pommes frites"));
+        meny2.leggTilRett(register.finnRett("Sjokolademousse"));
+        register.registrerNyMeny(meny2);
+
 
         boolean isRunning = true;
 
@@ -16,14 +41,14 @@ public class Oppg2 {
             scanner.nextLine();
 
             switch (valg) {
-                case 1:
+                case 1: //Registrer ny rett
                     System.out.print("Navn på rett: ");
                     String navn = scanner.nextLine();
                     System.out.print("Type (forrett, hovedrett, dessert): ");
                     String type = scanner.nextLine();
                     System.out.print("Pris: ");
                     double pris = scanner.nextDouble();
-                    scanner.nextLine(); // konsumér newline
+                    scanner.nextLine(); 
                     System.out.print("Oppskrift: ");
                     String oppskrift = scanner.nextLine();
 
@@ -32,7 +57,7 @@ public class Oppg2 {
                     System.out.println("Rett registrert!" + nyRett.toString());
                     break;
 
-                case 2:
+                case 2: //Registrer ny meny
                     System.out.print("Navn på meny: ");
                     String menyNavn = scanner.nextLine();
                     Meny nyMeny = new Meny(menyNavn);
@@ -60,14 +85,14 @@ public class Oppg2 {
                     System.out.println("Meny registrert!");
                     break;
 
-                case 3:
+                case 3: //Se alle menyer
                     System.out.println("\n--- Alle menyer ---");
                     for (Meny meny : register.getMenyer()) {
                         System.out.println(meny);
                     }
                     break;
 
-                case 4:
+                case 4: //Finn rett etter navn
                     System.out.print("Navn på rett å finne: ");
                     String søkNavn = scanner.nextLine();
                     Rett funnet = register.finnRett(søkNavn);
@@ -78,14 +103,14 @@ public class Oppg2 {
                     }
                     break;
 
-                case 5:
+                case 5: //Finn alle retter av type
                     System.out.print("Type å søke etter (forrett, hovedrett, dessert): ");
                     String søkType = scanner.nextLine();
                     System.out.println("Retter av type " + søkType + ":");
                     register.finnAlleRetterAvTypen(søkType);
                     break;
 
-                case 6:
+                case 6: //Finn menyer innenfor prisintervall
                     System.out.print("Minimal pris: ");
                     double min = scanner.nextDouble();
                     System.out.print("Maksimal pris: ");
@@ -99,7 +124,7 @@ public class Oppg2 {
                     }
                     break;
             
-                case 7:
+                case 7: //Avslutt
                     System.out.println("avslutter...");
                     isRunning = false;
                     break;

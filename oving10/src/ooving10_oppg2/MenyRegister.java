@@ -77,7 +77,7 @@ public class MenyRegister {
         System.out.println("4. Finn rett etter navn");
         System.out.println("5. Finn alle retter av type");
         System.out.println("6. Finn menyer innenfor prisintervall");
-        System.out.println("0. Avslutt");
+        System.out.println("7. Avslutt");
         System.out.print("Velg et alternativ: ");
     }
 
