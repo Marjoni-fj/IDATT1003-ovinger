@@ -4,7 +4,7 @@ import java.util.List;
 
 
 public class MenyRegister {
-    private List<Rett> meny; //ArrayList med Rett objekter
+    private List<Rett> meny; //attribute er meny ArrayList med Rett objekter
 
     public MenyRegister() { //konstruktør som lager Arraylist
         meny = new ArrayList<>();
