@@ -38,24 +38,20 @@ public class MenyRegister {
         return null;
     } 
 
-    public Meny finnRett(String Rettnavn){
-        for (Meny meny : menyer){
-            for (Rett rett : meny.getRetter()){
-                if (rett.getNavn().equals(Rettnavn)){
-                    System.out.println(rett.toString());
-                }
+    public Rett finnRett(String Rettnavn){
+        for (Rett rett : alleRetter){
+            if (rett.getNavn().equalsIgnoreCase(Rettnavn)){
+                    return rett;
             }
         }
         return null;
     }
 
     public void finnAlleRetterAvTypen(String type){
-        for (Meny meny : menyer){
-            for (Rett rett : meny.getRetter()){
-                if (rett.getType().equals(type))
+        for (Rett rett : alleRetter){
+            if (rett.getType().equalsIgnoreCase(type))
                     System.out.println(rett.toString());
 
-            }
         }
     }
     public List<Meny> finnMenyerMedTotalprisMellom(double minimalPrice, double maximalPrice){
