@@ -8,22 +8,20 @@ public class Meny {
 
     public Meny(String navn) {
         this.navn = navn;
+    }
 
-    }
-    public String getNavn(){
-        return navn;
-    }
-    public void leggTilRett(Rett rett){
-        retter.add(rett);
-    }
+    public String getNavn(){ return navn; }
+    public List<Rett> getRetter(){ return retter; }
+    public void leggTilRett(Rett rett){ retter.add(rett); }
+
     public double beregnMenyTotalpris(){
         double totalPris = 0;
         for (Rett rett : retter){
             totalPris += rett.getPris();
         }
         return totalPris;
-
     }
+
     public void finnRettSomHeter(String navn){ //finner en spesifikt rett i menyen basert på navn
         for (Rett rett : retter) {
             if (rett.getNavn().equalsIgnoreCase(navn)) {
