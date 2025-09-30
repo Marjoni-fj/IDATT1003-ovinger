@@ -24,6 +24,34 @@ public class Meny {
         return totalPris;
 
     }
+    public void finnRettSomHeter(String navn){ //finner en spesifikt rett i menyen basert på navn
+        for (Rett rett : retter) {
+            if (rett.getNavn().equalsIgnoreCase(navn)) {
+                System.out.println(rett);
+            }
+            else{ System.out.println("Vi har desverre ikke" + navn + "på denne menyen");}
+            
+        }
+    }
 
+    public void finnRettAvTypen(String type){ //finner en spesifikt rett i menyen basert på type
+        for (Rett rett : retter){
+            if (rett.getType().equalsIgnoreCase(type)){
+                    System.out.println(rett);
+            }
+            else { System.out.println("Vi har desverre ikke slike rett typer på denne menyen");}
+            }
+
+        }
+    
+    @Override
+    public String toString(){
+        String tekst = "Meny: " + navn + "\n";
+        for (Rett rett : retter) {
+            tekst += "  - " + rett.toString() + "\n"; 
+        }
+        tekst += "Totalpris: " + beregnMenyTotalpris() + "\n";
+        return tekst;
+    };
     
 }
