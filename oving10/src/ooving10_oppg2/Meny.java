@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Meny {
     private String navn;
-    private List<Rett> retter = new ArrayList<>();
+    private List<Rett> retter = new ArrayList<>(); //attribute er retter ArrayList med rett objekter
 
     public Meny(String navn) {
         this.navn = navn;

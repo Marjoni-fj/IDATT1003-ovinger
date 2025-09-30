@@ -4,10 +4,16 @@ import java.util.List;
 
 
 public class MenyRegister {
-    private List<Meny> menyer; //attribute er meny ArrayList med Rett objekter
+    private List<Meny> menyer; //attribute er Menyer ArrayList med Meny objekter
 
     public MenyRegister() { //konstruktør som lager Arraylist
         menyer = new ArrayList<>();
+    }
+
+    private List<Rett> alleRetter = new ArrayList<>();
+
+    public void registrerNyRett(Rett rett) {
+        alleRetter.add(rett);
     }
     
     public List<Meny> getMenyer() { //Get metode for å hente menyen
@@ -26,6 +32,7 @@ public class MenyRegister {
         }
         return null;
     } 
+
     public void finnAlleRetterAvTypen(String type){
         for (Meny meny : menyer){
             for (Rett rett : meny.getRetter()){
@@ -35,4 +42,14 @@ public class MenyRegister {
             }
         }
     }
+    public Meny finnMenyerMedTotalprisMellom(double minimalPrice, double maximalPrice){
+        List<Meny> menyIntervall = new ArrayList<Meny>();
+        for (Meny meny : menyer){
+            if (meny.beregnMenyTotalpris() >= minimalPrice && meny.beregnMenyTotalpris() <= maximalPrice){
+                menyIntervall.add(meny);
+            }
+        }
+        return null;
+    }
+
 }
