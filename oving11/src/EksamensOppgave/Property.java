@@ -1,13 +1,13 @@
 package EksamensOppgave;
 
 public class Property {
-    private int municipalityNr;
-    private String municipalityName;
-    private int lotNr;
-    private int sectionNr;
-    private String propertyName;
-    private double area;
-    private String owner;
+    private int municipalityNr; //Kommune nummer
+    private final String municipalityName; //Kommune navn
+    private int lotNr; //Gårdsnummer
+    private int sectionNr; //Bruksnummer
+    private String propertyName; //Bruksnavn
+    private double area; //Areal
+    private String owner; //Navn på	eier	
 
     /**
      * Constructor initializing all fields for a property.
@@ -63,9 +63,9 @@ public class Property {
     /**toString method to display Property in a nice way */
     @Override
     public String toString() {
-        return getPropertyID() + " (" + municipalityName + "), " +
+        return "Property ID: " + getPropertyID() + " (" + municipalityName + ")| " +
                 "Property name: " + (propertyName != null ? propertyName : "N/A") +
-                ", Area: " + area + " m2, Owner: " + owner;
+                "| Area: " + area + " m2| Owner: " + owner;
     }
     
 }
