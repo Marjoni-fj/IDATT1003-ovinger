@@ -21,6 +21,7 @@ public class Property {
 
     }
 
+    //=========Get methods=========
     public int getMunicipalityNr(){ return municipalityNr;}
     public String getMunicipalityName(){ return municipalityName;}
     public int getLotNr(){ return lotNr;}
@@ -29,19 +30,15 @@ public class Property {
     public double getArea(){ return area;}
     public String getOwner(){ return owner;}
 
-
-    /**
-     * Grunnen til at kommunenr, gnr og bnr ikke har settere,
-     * er at disse verdiene entydig identifiserer eiendommen,
-     * og bør ikke kunne endres etter opprettelse.
-     */
-    public void setSectionNr(int sectionNr) { this.sectionNr = sectionNr;}
-
+    //=========Set methods=========
     public void setArea(double area) {
         if (area > 0)
             this.area = area;
     }
 
     public void setOwner(String owner) { this.owner = owner;}
+
+    //=========Get ID methods=========
+    public String getPropertyID(){ return municipalityNr + "-" + lotNr + "/" + sectionNr;}
     
 }
