@@ -54,7 +54,9 @@ public class PropertyRegister {
         boolean found = false;
         for (Property p : properties){
             if (p.getMunicipalityNr() == mNumber && p.getLotNr() == lNumber && p.getSectionNr() == sNumber){
+                System.out.println("Property found:");
                 System.out.println(p);
+                found = true;
             }
         }
         if (!found){ System.out.println("No property with those numbers");}
