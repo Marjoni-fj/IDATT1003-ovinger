@@ -28,6 +28,16 @@ public class UserProgram {
                     break;
 
                 case 3: //Remove property
+                    for (Property p : register.getProperties()) { System.out.println(p);}
+                    System.out.println("Which property do you want to remove? ");
+                    System.out.print("What's the municipality number: ");
+                    int xmNumber = scanner.nextInt();
+                    System.out.print("What's the lot number: ");
+                    int xlNumber = scanner.nextInt();
+                    System.out.print("What's the section number: ");
+                    int xsNumber = scanner.nextInt();
+                    register.deleteProperty(xmNumber, xlNumber, xsNumber);
+
                     
                     break;
 

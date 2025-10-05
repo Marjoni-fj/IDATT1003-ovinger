@@ -23,7 +23,19 @@ public class PropertyRegister {
     }
 
     /**Removes a Property in the municipality */
-    public void deleteProperty(Property property){ properties.remove(property); }
+    public boolean deleteProperty(int municipalityNr, int lotNr, int sectionNr) {
+    for (Property p : properties) {
+        if (p.getMunicipalityNr() == municipalityNr &&
+            p.getLotNr() == lotNr &&
+            p.getSectionNr() == sectionNr) {
+            properties.remove(p);
+            System.out.println("Property sucessfully removed");
+            return true;
+        }
+    }
+    return false; // if not found
+}
+
 
     /**Finds a Property in the municipality with a given municipality number*/
     public void findPropertyMunicipalityNR(int number){
@@ -80,7 +92,7 @@ public class PropertyRegister {
 		System.out.println("4.	Search property");
 		System.out.println("5.	Calculate average property area");
 		System.out.println("6.	Quit");
-		System.out.println("\nPlease enter a number between 1	and 9");
+		System.out.println("\nPlease enter a number between 1	and 6");
         System.out.print("Choice: ");
     }
 
