@@ -9,11 +9,11 @@ public class UserProgram {
         PropertyRegister register = new PropertyRegister();
 
         // Add properties to the register
-        register.newPoperty(1445, "Gloppen", 77, 631, "Property1", 1017.6, "Jens Olsen");
-        register.newPoperty(1445, "Gloppen", 77, 131, "Syningom", 661.3, "Nicolay Madsen");
-        register.newPoperty(1445, "Gloppen", 75, 19, "Fugletun", 650.6, "Evilyn Jensen");
-        register.newPoperty(1445, "Gloppen", 74, 1445, "Property4", 1457.2, "Karl Ove Bråten");
-        register.newPoperty(1445, "Gloppen", 69, 188, "Høiberg", 1339.4, "Elsa Indregård");
+        register.addPoperty(1445, "Gloppen", 77, 631, "Property1", 1017.6, "Jens Olsen");
+        register.addPoperty(1445, "Gloppen", 77, 131, "Syningom", 661.3, "Nicolay Madsen");
+        register.addPoperty(1445, "Gloppen", 75, 19, "Fugletun", 650.6, "Evilyn Jensen");
+        register.addPoperty(1445, "Gloppen", 74, 1445, "Property4", 1457.2, "Karl Ove Bråten");
+        register.addPoperty(1445, "Gloppen", 69, 188, "Høiberg", 1339.4, "Elsa Indregård");
 
         while (isRunning){
             register.showMenu();
@@ -24,32 +24,16 @@ public class UserProgram {
                     for (Property p : register.getProperties()) { System.out.println(p);} 
                     break;
                 case 2: //Add property
-                    
+                    register.NewProperty(scanner);
                     break;
 
                 case 3: //Remove property
                     for (Property p : register.getProperties()) { System.out.println(p);}
-                    System.out.println("Which property do you want to remove? ");
-                    System.out.print("What's the municipality number: ");
-                    int xmNumber = scanner.nextInt();
-                    System.out.print("What's the lot number: ");
-                    int xlNumber = scanner.nextInt();
-                    System.out.print("What's the section number: ");
-                    int xsNumber = scanner.nextInt();
-                    register.deleteProperty(xmNumber, xlNumber, xsNumber);
-
-                    
+                    register.unregisterProperty(scanner);
                     break;
 
                 case 4: //Search property
-                    System.out.print("What's the municipality number: ");
-                    int mNumber = scanner.nextInt();
-                    System.out.print("What's the lot number: ");
-                    int lNumber = scanner.nextInt();
-                    System.out.print("What's the section number: ");
-                    int sNumber = scanner.nextInt();
-                    register.findProperty(mNumber, lNumber, sNumber);
-                                        
+                    register.searchProperty(scanner);                               
                     break;
 
                 case 5: //Calculate average property area
