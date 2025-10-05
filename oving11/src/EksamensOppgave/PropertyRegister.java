@@ -49,7 +49,7 @@ public class PropertyRegister {
             }
         }
     }
-
+    /**Finds average property area the municipality*/
     public double averagePropertyArea(){
         double totalArea = 0;
         for (Property p : properties){
