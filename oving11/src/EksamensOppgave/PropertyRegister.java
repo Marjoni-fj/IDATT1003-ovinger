@@ -49,6 +49,17 @@ public class PropertyRegister {
             }
         }
     }
+    /**Finds a specific Property in the municipality with a specific municipality number, lot number and a section number*/
+    public void findProperty(int mNumber, int lNumber, int sNumber){
+        boolean found = false;
+        for (Property p : properties){
+            if (p.getMunicipalityNr() == mNumber && p.getLotNr() == lNumber && p.getSectionNr() == sNumber){
+                System.out.println(p);
+            }
+        }
+        if (!found){ System.out.println("No property with those numbers");}
+        
+    }
     /**Finds average property area the municipality*/
     public double averagePropertyArea(){
         double totalArea = 0;
