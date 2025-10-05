@@ -49,4 +49,14 @@ public class PropertyRegister {
             }
         }
     }
+
+    public double averagePropertyArea(){
+        double totalArea = 0;
+        for (Property p : properties){
+            totalArea += p.getArea();
+        }
+        double average = totalArea/((double)properties.size());
+        return average;
+    }
+
 }
