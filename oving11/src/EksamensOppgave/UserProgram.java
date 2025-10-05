@@ -9,11 +9,11 @@ public class UserProgram {
         PropertyRegister register = new PropertyRegister();
 
         // Add properties to the register
-        register.addPoperty(1445, "Gloppen", 77, 631, "Property1", 1017.6, "Jens Olsen");
-        register.addPoperty(1445, "Gloppen", 77, 131, "Syningom", 661.3, "Nicolay Madsen");
-        register.addPoperty(1445, "Gloppen", 75, 19, "Fugletun", 650.6, "Evilyn Jensen");
-        register.addPoperty(1445, "Gloppen", 74, 1445, "Property4", 1457.2, "Karl Ove Bråten");
-        register.addPoperty(1445, "Gloppen", 69, 188, "Høiberg", 1339.4, "Elsa Indregård");
+        register.addProperty(1445, "Gloppen", 77, 631, "Property1", 1017.6, "Jens Olsen");
+        register.addProperty(1445, "Gloppen", 77, 131, "Syningom", 661.3, "Nicolay Madsen");
+        register.addProperty(1445, "Gloppen", 75, 19, "Fugletun", 650.6, "Evilyn Jensen");
+        register.addProperty(1445, "Gloppen", 74, 1445, "Property4", 1457.2, "Karl Ove Bråten");
+        register.addProperty(1445, "Gloppen", 69, 188, "Høiberg", 1339.4, "Elsa Indregård");
 
         while (isRunning){
             register.showMenu();
@@ -24,7 +24,7 @@ public class UserProgram {
                     for (Property p : register.getProperties()) { System.out.println(p);} 
                     break;
                 case 2: //Add property
-                    register.NewProperty(scanner);
+                    register.newProperty(scanner);
                     break;
 
                 case 3: //Remove property

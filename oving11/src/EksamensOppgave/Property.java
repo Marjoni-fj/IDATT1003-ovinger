@@ -1,13 +1,13 @@
 package EksamensOppgave;
 
 public class Property {
-    private int municipalityNr; //Kommune nummer
-    private final String municipalityName; //Kommune navn
-    private int lotNr; //Gårdsnummer
-    private int sectionNr; //Bruksnummer
-    private String propertyName; //Bruksnavn
-    private double area; //Areal
-    private String owner; //Navn på	eier	
+    private int municipalityNr; //Norwegian: Kommune nummer
+    private final String municipalityName; //Norwegian: Kommune navn
+    private int lotNr; //Norwegian: Gårdsnummer
+    private int sectionNr; //Norwegian: Bruksnummer
+    private String propertyName; //Norwegian: Bruksnavn
+    private double area; //Norwegian: Areal
+    private String owner; //Norwegian: Navn på eier	
 
     /**
      * Constructor initializing all fields for a property.

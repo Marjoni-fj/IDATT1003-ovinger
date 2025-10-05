@@ -22,7 +22,7 @@ public class PropertyRegister {
     /*======================Case 2: register and add new property ================================ */
 
     /**Adds a new Property in the municipality */
-    public void addPoperty(int municipalityNr, String municipalityName, int lotNr, 
+    public void addProperty(int municipalityNr, String municipalityName, int lotNr, 
                         int sectionNr,  String propertyName, double area, String owner){
         properties.add(new Property(municipalityNr, municipalityName, lotNr, sectionNr, propertyName, area, owner));
     }
@@ -30,7 +30,7 @@ public class PropertyRegister {
      * Handles the logic
      * @param scanner
     */
-    public void NewProperty(Scanner scanner) {
+    public void newProperty(Scanner scanner) {
         System.out.print("Municipality number: ");
         int municipalityNr = scanner.nextInt();
         scanner.nextLine(); // clear newline
@@ -55,7 +55,7 @@ public class PropertyRegister {
         System.out.print("Owner name: ");
         String owner = scanner.nextLine();
 
-        addPoperty(municipalityNr, municipalityName, lotNr, sectionNr, propertyName, area, owner);
+        addProperty(municipalityNr, municipalityName, lotNr, sectionNr, propertyName, area, owner);
         System.out.println("✅ Property successfully added!");
     }
     /*======================================================================================== */
