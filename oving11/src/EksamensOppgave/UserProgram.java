@@ -32,11 +32,18 @@ public class UserProgram {
                     break;
 
                 case 4: //Search property
-                    
+                    System.out.print("What's the municipality number: ");
+                    int mNumber = scanner.nextInt();
+                    System.out.print("What's the lot number: ");
+                    int lNumber = scanner.nextInt();
+                    System.out.print("What's the section number: ");
+                    int sNumber = scanner.nextInt();
+                    register.findProperty(mNumber, lNumber, sNumber);
+                                        
                     break;
 
                 case 5: //Calculate average property area
-                    
+                    System.out.println("The average property area in the municipality is " + register.averagePropertyArea() + " m2");
                     break;
                 
                 case 6:
