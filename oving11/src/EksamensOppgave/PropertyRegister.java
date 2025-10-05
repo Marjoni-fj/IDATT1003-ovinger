@@ -57,6 +57,7 @@ public class PropertyRegister {
 
         addProperty(municipalityNr, municipalityName, lotNr, sectionNr, propertyName, area, owner);
         System.out.println("✅ Property successfully added!");
+        System.out.println("Total properties in the municipality: " + this.getTotalProperties());
     }
     /*======================================================================================== */
 
@@ -89,6 +90,7 @@ public class PropertyRegister {
         System.out.print("What's the section number: ");
         int xsNumber = scanner.nextInt();
         deleteProperty(xmNumber, xlNumber, xsNumber);
+        System.out.println("Total properties in the municipality: " + this.getTotalProperties());
 
     }
     /*======================================================================================== */

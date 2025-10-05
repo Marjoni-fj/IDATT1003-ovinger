@@ -16,12 +16,13 @@ public class UserProgram {
         register.addProperty(1445, "Gloppen", 69, 188, "Høiberg", 1339.4, "Elsa Indregård");
 
         while (isRunning){
-            register.showMenu();
+            PropertyRegister.showMenu();
             int choice = scanner.nextInt();
             System.out.println();
             switch (choice) {
                 case 1: //List all properties
                     for (Property p : register.getProperties()) { System.out.println(p);} 
+                    System.out.println("Total properties in the municipality: " + register.getTotalProperties());
                     break;
                 case 2: //Add property
                     register.newProperty(scanner);
