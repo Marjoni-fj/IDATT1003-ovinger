@@ -26,7 +26,7 @@ public class PropertyRegister {
     public void deleteProperty(Property property){ properties.remove(property); }
 
     /**Finds a Property in the municipality with a given municipality number*/
-    private void findPropertyMunicipalityNR(int number){
+    public void findPropertyMunicipalityNR(int number){
         for (Property p : properties){
             if (p.getMunicipalityNr() == number){
                 System.out.println(p);
@@ -34,7 +34,7 @@ public class PropertyRegister {
         }
     }
     /**Finds a Property in the municipality with a given lot number*/
-    private void findPropertyLotNR(int number){
+    public void findPropertyLotNR(int number){
         for (Property p : properties){
             if (p.getLotNr() == number){
                 System.out.println(p);
@@ -42,7 +42,7 @@ public class PropertyRegister {
         }
     }
     /**Finds a Property in the municipality with a given section number*/
-    private void findPropertySectionNR(int number){
+    public void findPropertySectionNR(int number){
         for (Property p : properties){
             if (p.getSectionNr() == number){
                 System.out.println(p);
@@ -68,6 +68,18 @@ public class PropertyRegister {
         }
         double average = totalArea/((double)properties.size());
         return average;
+    }
+    /**Displays a menu for the application */
+    public void showMenu(){
+        System.out.println("\n*****	Gloppen municipality Property Register Application	*****\n");
+		System.out.println("1.	List all properties");
+        System.out.println("2.	Add property");
+        System.out.println("3.	Remove property");
+		System.out.println("4.	Search property");
+		System.out.println("5.	Calculate average property area");
+		System.out.println("6.	Quit");
+		System.out.println("\nPlease enter a number between 1	and 9");
+        System.out.print("Choice: ");
     }
 
 }

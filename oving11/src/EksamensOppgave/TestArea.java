@@ -2,7 +2,7 @@ package EksamensOppgave;
 
 public class TestArea {
     public static void main(String[] args){
-        // Create a PropertyRegister
+        /*// Create a PropertyRegister
         PropertyRegister register = new PropertyRegister();
 
         // Add properties to the register
@@ -18,6 +18,7 @@ public class TestArea {
         }
 
         // Example: Print average property area
-        System.out.println("Average property area: " + register.averagePropertyArea() + " m2");
+        System.out.println("Average property area: " + register.averagePropertyArea() + " m2"); */
+        
     }
 }
