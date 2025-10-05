@@ -162,7 +162,7 @@ public class PropertyRegister {
         return average;
     }
     /**Displays a menu for the application */
-    public void showMenu(){
+    public static void showMenu(){
         System.out.println("\n*****	Gloppen municipality Property Register Application	*****\n");
 		System.out.println("1.	List all properties");
         System.out.println("2.	Add property");
